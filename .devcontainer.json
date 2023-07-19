@@ -1,0 +1,14 @@
+{
+        "image": "nordicplayground/nrfconnect-sdk:main",
+        "customizations": {
+                "vscode": {
+                        "extensions": [
+                                "nordic-semiconductor.nrf-connect-extension-pack"
+                        ],
+                        "settings": {
+                                "nrf-connect.topdir": "/workdir",
+                                "nrf-connect.toolchain.path": "PATH"
+                        }
+                }
+        }
+}
