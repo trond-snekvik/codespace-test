@@ -1,0 +1,46 @@
+{
+    "name": "nRF Connect",
+    "id": "nrf-connect",
+    "version": "0.2.2",
+    "description": "Tools for developing with devices supporting nRF Connect",
+
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+
+    "customizations": {
+        "vscode": {
+          "extensions": ["nordic-semiconductor.nrf-connect-extension-pack"]
+        }
+    },
+
+    "options": {
+        "sdkVersion": {
+            "type": "string",
+            "proposals": [
+                "v2.0.2",
+                "v2.1.4",
+                "v2.2.0",
+                "v2.3.0",
+                "v2.4.0"
+            ],
+            "default": "v2.4.0"
+        },
+        "projectType": {
+            "type": "string",
+            "enum": [
+                "workspace",
+                "freestanding"
+            ],
+            "default": "workspace",
+            "description": "This determines whether the SDK should be installed globally on the machine."
+        },
+        "initializeWorkspaceProject": {
+          "type": "boolean",
+          "default": true,
+          "description": "Initializes a workspace project on startup. This only has an effect if `projectType` is set to `workspace`."
+        }
+    },
+
+    "updateContentCommand": "initialize-workspace-application.sh"
+}

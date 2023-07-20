@@ -1,5 +1,10 @@
 {
-        "image": "nordicplayground/nrfconnect-sdk:main",
+        "image": "ubuntu:latest",
+        "features": {
+          "./nrf-connect": {
+            "projectType": "workspace"
+          }
+        },
         "customizations": {
                 "vscode": {
                         "extensions": [
